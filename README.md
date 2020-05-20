@@ -14,18 +14,18 @@ Minimal and simple HTML-template you can use with [Dropshare](https://dropshare.
  - Confidentiality notice
  - CloudFlare CDN for Font Awesome icons
 
- # Installation:
+ ## Installation:
 
  - Copy content of [dropshare-landing-page.html](https://raw.githubusercontent.com/smkrv/dropshare-landing-page/master/dropshare-landing-page.html) into dropshare.app → Preferences → Landing Page
  - Update Copyright
  - ???
  - Profit!
 
- # Based on the following templates:
+ ## Based on the following templates:
  - [stefanzweifel / dropshare-landingpage](https://github.com/stefanzweifel/dropshare-landingpage)
  - [EvanLovely / dropshare-landing-page](https://github.com/EvanLovely/dropshare-landing-page)
 
- ## License
+ ### License
 
  MIT License
 
