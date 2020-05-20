@@ -4,7 +4,7 @@ Minimal and simple HTML-template you can use with [Dropshare](https://dropshare.
 
  ![Preview](https://github.com/smkrv/dropshare-landing-page/blob/master/dropshare-landing-page-template.png?raw=true).
 
- # Features
+ ## Features:
 
  - Clean and simple design
  - [instant.page](https://instant.page)
