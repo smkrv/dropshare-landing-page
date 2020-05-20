@@ -1,6 +1,6 @@
 Minimal and simple HTML-template you can use with [Dropshare](https://dropshare.app) (macOS & iOS).
 
- # Example of image/video langing page
+ ## Example of image/video langing page
 
  ![Preview](https://github.com/smkrv/dropshare-landing-page/blob/master/dropshare-landing-page-template.png?raw=true).
 
@@ -25,7 +25,7 @@ Minimal and simple HTML-template you can use with [Dropshare](https://dropshare.
  - [stefanzweifel / dropshare-landingpage](https://github.com/stefanzweifel/dropshare-landingpage)
  - [EvanLovely / dropshare-landing-page](https://github.com/EvanLovely/dropshare-landing-page)
 
- ### License
+ ## License
 
  MIT License
 
