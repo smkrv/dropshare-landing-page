@@ -14,6 +14,7 @@ Minimal and simple HTML-template you can use with Dropshare (macOS & iOS) [Drops
  - JS copyright year
  - Nice and clean upload date and time
  - Confidentiality notice
+ - CloudFlare CDN for Font Awesome icons
 
  # Installation
 
