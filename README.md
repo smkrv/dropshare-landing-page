@@ -1,5 +1,3 @@
-# dropshare-landing-page
-
  # Dropshare Landingpage
 
 Minimal and simple HTML template you can use with Dropshare (macOS & iOS) [Dropshare](https://dropshare.app).
@@ -24,8 +22,8 @@ Minimal and simple HTML template you can use with Dropshare (macOS & iOS) [Drops
  - Profit!
 
  # Templates used
- [stefanzweifel / dropshare-landingpage](https://github.com/stefanzweifel/dropshare-landingpage)
- [EvanLovely / dropshare-landing-page](https://github.com/EvanLovely/dropshare-landing-page)
+ - [stefanzweifel / dropshare-landingpage](https://github.com/stefanzweifel/dropshare-landingpage)
+ - [EvanLovely / dropshare-landing-page](https://github.com/EvanLovely/dropshare-landing-page)
 
  ## License
 
