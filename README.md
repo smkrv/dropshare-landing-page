@@ -16,7 +16,7 @@ Minimal and simple HTML template you can use with Dropshare (macOS & iOS) [Drops
 
  # Installation
 
- - Copy content of `dropshare-landing-page.html` into dropshare.app → Preferences → Landing Page
+ - Copy content of [dropshare-landing-page.html](https://raw.githubusercontent.com/smkrv/dropshare-landing-page/master/dropshare-landing-page.html) into dropshare.app → Preferences → Landing Page
  - Update Copyright
  - ???
  - Profit!
