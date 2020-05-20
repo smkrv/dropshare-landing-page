@@ -1,4 +1,4 @@
-# Minimal and simple HTML-template you can use with [Dropshare](https://dropshare.app) (macOS & iOS).
+ ## Minimal and simple HTML-template you can use with [Dropshare](https://dropshare.app) (macOS & iOS).
 
  ![Preview](https://github.com/smkrv/dropshare-landing-page/blob/master/dropshare-landing-page-template.png?raw=true).
 
