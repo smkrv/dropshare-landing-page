@@ -9,9 +9,10 @@ Minimal and simple HTML template you can use with Dropshare (macOS & iOS) [Drops
  # Features
 
  - Clean and simple design
- - [instant.page](https://instant.page) preloads a screenshot right before a user clicks on it
+ - [instant.page](https://instant.page)
  - Open Graph tags
  - JS copyright year
+ - Nice and clean upload date and time
  - Confidentiality notice
 
  # Installation
