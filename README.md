@@ -1,4 +1,4 @@
- # Dropshare Landingpage
+ # Dropshare landing page template
 
 Minimal and simple HTML-template you can use with [Dropshare](https://dropshare.app) (macOS & iOS).
 
