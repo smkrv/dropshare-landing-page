@@ -23,7 +23,7 @@ Minimal and simple HTML-template you can use with [Dropshare](https://dropshare.
  - ???
  - Profit!
 
- # Templates used
+ # Based on the following templates
  - [stefanzweifel / dropshare-landingpage](https://github.com/stefanzweifel/dropshare-landingpage)
  - [EvanLovely / dropshare-landing-page](https://github.com/EvanLovely/dropshare-landing-page)
 
