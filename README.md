@@ -4,7 +4,7 @@ Minimal and simple HTML template you can use with Dropshare (macOS & iOS) [Drops
 
  # Example of image/video langing page
 
- ![Preview](https://raw.githubusercontent.com/smkrv/dropshare-landing-page/master/dropshare-landing-page-screenshot.png).
+ ![Preview](https://github.com/smkrv/dropshare-landing-page/blob/master/dropshare-landing-page-screenshot.png?raw=true).
 
  # Features
 
