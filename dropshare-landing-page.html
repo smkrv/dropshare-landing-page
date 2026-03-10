@@ -35,8 +35,8 @@
     <meta name="twitter:title" content="__FILENAME__ | __SHAREDATE__">
     <link rel="canonical" href="__LANDINGPAGEURL__">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -54,7 +54,7 @@
             width: 100%;
             background: white;
             border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             padding: 30px;
         }
 
@@ -67,7 +67,7 @@
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .download-button {
@@ -96,12 +96,20 @@
             margin: 20px 0;
         }
 
+        .file-info .separator {
+            margin: 0 10px;
+        }
+
+        .file-icon-placeholder {
+            color: #2563eb;
+        }
+
         footer {
             margin-top: 30px;
         }
 
         .copyright {
-            font-size: 10pt;
+            font-size: 0.75rem;
             border: 1px solid #e89174;
             padding: 15px;
             margin-top: 20px;
@@ -123,6 +131,11 @@
         .legal-title {
             font-weight: bold;
             margin-bottom: 15px;
+        }
+
+        .legal-title .fa-shield-halved {
+            margin-right: 8px;
+            color: #e89174;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -147,8 +160,11 @@
             .download-button:hover {
                 background: #2563eb;
             }
-            .legal-title .fas {
-                color: #f97316; 
+            .legal-title .fa-shield-halved {
+                color: #f97316;
+            }
+            .file-icon-placeholder {
+                color: #3b82f6;
             }
         }
     </style>
@@ -167,60 +183,88 @@
 
         <!-- Download Button After Preview -->
         <a href="__PATH__" download="__FILENAME__" class="download-button">
-            <i class="fas fa-download"></i> Download File
+            <i class="fas fa-download" aria-hidden="true"></i> Download File
         </a>
 
         <!-- File Info -->
         <div class="file-info">
-            <span><i class="fas fa-file-alt"></i> __FILENAME__</span>
-            <span style="margin: 0 10px">•</span>
-            <span><i class="fas fa-weight"></i> __FILESIZE__</span>
-            <span style="margin: 0 10px">•</span>
-            <span><i class="far fa-clock"></i> <time datetime="__UNIXSHAREDATE__">__SHAREDATE__</time></span>
+            <span><i class="fas fa-file-lines" aria-hidden="true"></i> __FILENAME__</span>
+            <span class="separator">&bull;</span>
+            <span><i class="fas fa-weight-hanging" aria-hidden="true"></i> __FILESIZE__</span>
+            <span class="separator">&bull;</span>
+            <span><i class="far fa-clock" aria-hidden="true"></i> <time datetime="__SHAREDATE__">__SHAREDATE__</time></span>
         </div>
 
         <!-- Footer with Legal Notice -->
         <footer>
-          <div class="copyright">
-              <p class="legal-title">
-                  <i class="fas fa-shield-alt" style="margin-right: 8px; color: #e89174;"></i>
-                  LEGAL NOTICE - CONFIDENTIAL INFORMATION
-              </p>
-              
-              <p>
-                  This page and any files transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. This message contains confidential information and is intended only for the individual named. If you are not the named addressee you should not disseminate, distribute or copy this page or any files transmitted with it.
-              </p>
-              
-              <p>
-                  NOTICE: If you have received access to this page in error, please notify the sender immediately by email, delete this page from your system and destroy any copies. You are hereby notified that any disclosure, copying, distribution or taking any action in reliance on the contents of this information is strictly prohibited and may be unlawful.
-              </p>
-              
-              <p>
-                  Any views or opinions presented in the files shared are solely those of the author and do not necessarily represent those of the organization. The organization accepts no liability for any damage caused by any virus transmitted by or with this page.
-              </p>
-              
-              <hr>
-              
-              <p>
-                  Copyright © 2022<script>
-                      new Date().getFullYear() > 2022 && document.write("-" + new Date().getFullYear());
-                  </script>, Your Name From YourCity with <i class="fas fa-heart" aria-hidden="true"></i>
-              </p>
-          </div>
+            <div class="copyright">
+                <p class="legal-title">
+                    <i class="fas fa-shield-halved" aria-hidden="true"></i>
+                    LEGAL NOTICE - CONFIDENTIAL INFORMATION
+                </p>
+
+                <p>
+                    This page and any files transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. This message contains confidential information and is intended only for the individual named. If you are not the named addressee you should not disseminate, distribute or copy this page or any files transmitted with it.
+                </p>
+
+                <p>
+                    NOTICE: If you have received access to this page in error, please notify the sender immediately by email, delete this page from your system and destroy any copies. You are hereby notified that any disclosure, copying, distribution or taking any action in reliance on the contents of this information is strictly prohibited and may be unlawful.
+                </p>
+
+                <p>
+                    Any views or opinions presented in the files shared are solely those of the author and do not necessarily represent those of the organization. The organization accepts no liability for any damage caused by any virus transmitted by or with this page.
+                </p>
+
+                <hr>
+
+                <p>
+                    Copyright &copy; <span id="copyright-year">2022</span>, Your Name From YourCity with <i class="fas fa-heart" aria-hidden="true"></i>
+                </p>
+            </div>
         </footer>
     </div>
 
     <script>
-        window.onload = function() {
-            var targetDiv = document.getElementById('icon');
-            var fileType = "__FILETYPE__";
-            var mediaTypes = ['public.png', 'public.jpeg', 'com.apple.quicktime-movie', 'public.mpeg-4'];
-            
+        document.addEventListener('DOMContentLoaded', function () {
+            // Replace preview with file icon for non-media types
+            const targetDiv = document.getElementById('icon');
+            const fileType = '__FILETYPE__';
+            const mediaTypes = [
+                'public.png',
+                'public.jpeg',
+                'public.gif',
+                'public.webp',
+                'public.svg-image',
+                'public.heic',
+                'public.heif',
+                'public.tiff',
+                'public.bmp',
+                'com.apple.quicktime-movie',
+                'public.mpeg-4',
+                'public.avi',
+                'com.microsoft.windows-media-wmv',
+                'public.plain-text',
+                'public.html',
+                'public.pdf'
+            ];
+
             if (!mediaTypes.includes(fileType)) {
-                targetDiv.innerHTML = '<i class="fas fa-file fa-5x" style="color: #2563eb;"></i>';
+                while (targetDiv.firstChild) {
+                    targetDiv.removeChild(targetDiv.firstChild);
+                }
+                const icon = document.createElement('i');
+                icon.className = 'fas fa-file fa-5x file-icon-placeholder';
+                icon.setAttribute('aria-hidden', 'true');
+                targetDiv.appendChild(icon);
             }
-        }
+
+            // Dynamic copyright year range
+            const yearEl = document.getElementById('copyright-year');
+            const currentYear = new Date().getFullYear();
+            if (currentYear > 2022) {
+                yearEl.textContent = '2022\u2013' + currentYear;
+            }
+        });
     </script>
-<script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
 </body>
 </html>
